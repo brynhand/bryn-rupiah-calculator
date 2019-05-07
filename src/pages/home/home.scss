@@ -1,0 +1,121 @@
+page-home {
+  [input-amount] {
+    margin: 20px 0;
+    border-bottom: solid 0.5px color($colors, primary, base);
+
+    .item-inner {
+      border-bottom: none !important;
+    }
+  }
+
+  [btn-process] {
+    font-weight: bold;
+  }
+
+  [money-bills] {
+    height: 100px;
+    width: 200px;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 8px 0px;
+
+    ion-row > ion-col {
+      font-size: x-large;
+      font-weight: bold;
+    }
+  }
+
+  [money-coins] {
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: auto;
+    box-shadow: rgba(0, 0, 0, 0.75) 0px 0px 8px 0px;
+
+    ion-row {
+      height: 100%;
+
+      ion-col {
+        font-size: 36pt;
+        font-weight: bold;
+        margin: auto;
+      }
+    }
+  }
+
+  [bill-amount-text] {
+    font-size: x-large;
+    font-weight: bold;
+  }
+
+  .nominal_100000 {
+    color: #b53340;
+    background-image: linear-gradient(to right, #f7d7ec, #bf6b73);
+  }
+
+  .nominal_50000 {
+    color: #1c5696;
+    background-image: linear-gradient(to right, #b3ddeb, #4491bf);
+  }
+
+  .nominal_20000 {
+    color: #346f3f;
+    background-image: linear-gradient(to right, #d6f7da, #6f9684);
+  }
+
+  .nominal_10000 {
+    color: #63566a;
+    background-image: linear-gradient(to right, #cabdda, #837889);
+  }
+
+  .nominal_5000 {
+    color: #653831;
+    background-image: linear-gradient(to right, #f8e49f, #e9df9b);
+  }
+
+  .nominal_2000 {
+    color: #727976;
+    background-image: linear-gradient(to right, #c8cac9, #848d8b);
+  }
+
+  .nominal_1000 {
+    color: #494755;
+    background-image: linear-gradient(to right, #fbf4af, #daca74);
+  }
+
+  .nominal_500 {
+    color: #d6d4dc;
+    background-image: linear-gradient(to right, #b6b6c0, #807a86);
+  }
+
+  .nominal_100 {
+    color: #d6d4dc;
+    background-image: linear-gradient(to right, #b6b6c0, #807a86);
+  }
+
+  .nominal_50 {
+    color: #d6d4dc;
+    background-image: linear-gradient(to right, #b6b6c0, #807a86);
+  }
+
+  [help-box] {
+    border-radius: 3px;
+    background-color: #eaffeb;
+    border: .5px solid color($colors, primary, base);
+    padding: 16px;
+    text-align: left;
+    margin-bottom: 24px;
+
+    #title {
+      font-size: 12px;
+      font-weight: 600;
+      color: color($colors, primary, base);
+      margin-bottom: 8px;
+    }
+
+    #content {
+      font-size: 12px;
+      line-height: 1.42;
+      color: color($colors, dark, base);
+    }
+  }
+}

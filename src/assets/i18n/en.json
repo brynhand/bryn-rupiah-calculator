@@ -1,0 +1,20 @@
+{
+  "label": {
+    "amount": "Amount",
+    "example": "Example",
+    "how_to_use": "How to use",
+    "money": "Money",
+    "no_available_fraction": "No available fraction",
+    "nominal_money": "Nominal money",
+    "process": "Process",
+    "rupiah_calculator": "Rupiah Calculator"
+  },
+  "alert": {
+    "input_cannot_blank": "Input cannot be empty!",
+    "invalid_input": "Invalid input!",
+    "invalid_separator": "Invalid separator!",
+    "invalid_thousand_decimal": "Invalid thousand/decimal separator!",
+    "no_amount_money_input": "No amount of money inputted!",
+    "prefix_position_invalid": "Prefix position invalid!",
+  }
+}

@@ -1,0 +1,87 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>
+      {{'label.rupiah_calculator'|translate}}
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid padding>
+    <ion-item input-amount>
+      <ion-label stacked>{{'label.nominal_money'|translate}}</ion-label>
+      <ion-input mode="md" type="text"
+        placeholder="{{'label.example'|translate}}: 18.215, Rp17500, Rp17.500,00, Rp 120.325, 005.000, 0010000"
+        [(ngModel)]="amount" (keyup.enter)="process()"></ion-input>
+    </ion-item>
+    <div ion-col offset-0 col-12 offset-sm-4 col-sm-8 offset-md-6 col-md-6 offset-lg-8 col-lg-4 offset-xl-9 col-xl-3
+      padding-vertical>
+      <button ion-button block color="danger" btn-process btn-large
+        (click)="process()">{{'label.process'|translate}}</button>
+    </div>
+  </ion-grid>
+
+  <ion-grid>
+    <div help-box>
+      <div class="SF3B1" id="title">
+        {{'label.how_to_use'|translate}}
+      </div>
+      <div class="M0ezz" id="content">
+        <div>
+          1. Masukkan nominal uang yang akan dihitung pecahan nominalnya. <br>
+          2. Contoh penulisan nominal yang benar: 18.215 (18215), Rp17500 (17500), Rp17.500,00 (17500), Rp 120.325
+          (120325), 005.000 (5000), 001000 (1000) <br>
+          3. Contoh penulisan nominal yang salah: 17,500 (salah pemisah), 2 500 (salah pemisah), 3000 Rp (karakter yang
+          benar di posisi yang salah), Rp (nominal kosong) <br>
+          4. Tekan "Enter" atau klik tombol "Proses" untuk mulai kalkulasi.
+        </div>
+      </div>
+    </div>
+  </ion-grid>
+
+  <!-- <ion-grid padding>
+    <ion-row *ngFor="let bill of bills">
+      <div *ngIf="bill.bill">
+        <ion-col col-5>Rp {{bill.bill}}</ion-col>
+        <ion-col col-2>x</ion-col>
+        <ion-col col-5>{{bill.amount}}</ion-col>
+      </div>
+      <div *ngIf="bill.left">
+        <ion-col col-5>Rp {{bill.left}}</ion-col>
+      </div>
+    </ion-row>
+  </ion-grid> -->
+
+  <ion-grid padding>
+    <ion-row wrap>
+      <ion-col padding *ngFor="let bill of bills" col-12 col-sm-6 col-md-4 col-lg-3 col-xl-3>
+        <ion-card money-bills [ngClass]="bill.color" *ngIf="bill.bill && bill.bill >= 1000">
+          <ion-row justify-content-center>
+            <ion-col [ngClass]="bill.color" col-12 text-left>{{bill.bill}}</ion-col>
+          </ion-row>
+        </ion-card>
+        <ion-row>
+          <ion-col *ngIf="bill.bill >= 1000" col-12 bill-amount-text text-center>x{{bill.amount}}</ion-col>
+        </ion-row>
+
+        <ion-card money-coins [ngClass]="bill.color" *ngIf="bill.bill && bill.bill < 1000">
+          <ion-row justify-content-center>
+            <ion-col [ngClass]="bill.color" col-12 text-center>{{bill.bill}}</ion-col>
+          </ion-row>
+        </ion-card>
+        <ion-row>
+          <ion-col *ngIf="bill.bill < 1000" col-12 bill-amount-text text-center>x{{bill.amount}}</ion-col>
+        </ion-row>
+
+        <ion-card money-coins [ngClass]="bill.color" *ngIf="bill.left">
+          <ion-row justify-content-center>
+            <ion-col [ngClass]="bill.color" col-12 text-center>{{bill.left}}</ion-col>
+          </ion-row>
+        </ion-card>
+        <ion-row *ngIf="bill.left">
+          <ion-col col-12 bill-amount-text text-center>{{"label.no_available_fraction"|translate}}</ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

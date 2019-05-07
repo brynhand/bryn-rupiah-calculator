@@ -1,0 +1,20 @@
+{
+  "label": {
+    "amount": "Jumlah",
+    "example": "Contoh",
+    "how_to_use": "Cara penggunaan",
+    "money": "Uang",
+    "no_available_fraction": "Pecahan tidak tersedia",
+    "nominal_money": "Nominal uang",
+    "process": "Proses",
+    "rupiah_calculator": "Kalkulator Rupiah"
+  },
+  "alert": {
+    "input_cannot_blank": "Masukan tidak boleh kosong!",
+    "invalid_input": "Masukan tidak valid!",
+    "invalid_separator": "Pemisah tidak valid!",
+    "invalid_thousand_decimal": "Pemisah ribuan/desimal tidak valid!",
+    "no_amount_money_input": "Tidak ada masukan nominal uang!",
+    "prefix_position_invalid": "Posisi simbol mata uang tidak valid!"
+  }
+}
