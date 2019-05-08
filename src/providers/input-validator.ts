@@ -118,10 +118,4 @@ export class InputValidator {
       resolve({ status: true, value: format, check_id: 'format_amount' });
     });
   }
-
-  public check_currency_format(nominal) {
-    let check = accounting.checkCurrencyFormat(nominal);
-    console.log("check currency format accounting.js ", check);
-  }
-
 }
