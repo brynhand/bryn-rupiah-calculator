@@ -1,7 +1,7 @@
 {
-  "name": "tokped-test",
+  "name": "Kalkulator Rupiah",
   "version": "0.0.1",
-  "author": "Ionic Framework",
+  "author": "brynhand",
   "homepage": "http://ionicframework.com/",
   "private": true,
   "scripts": {
